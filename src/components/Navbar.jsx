@@ -13,8 +13,25 @@ import {
   Hide,
 } from "@chakra-ui/react";
 import { FiMenu, FiGithub, FiLinkedin } from "react-icons/fi";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../assets/E.Silva.webp";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
+
+const handleAbout = () => {
+  gsap.to(window, { duration: 1, scrollTo: "#about" });
+};
+const handleTech = () => {
+  gsap.to(window, { duration: 1, scrollTo: "#tech" });
+};
+const handleProjects = () => {
+  gsap.to(window, { duration: 1, scrollTo: "#projects" });
+};
+const handleGet = () => {
+  gsap.to(window, { duration: 1, scrollTo: "#getin" });
+};
 
 const Navbar = () => {
   return (
@@ -39,10 +56,10 @@ const Navbar = () => {
           />
         </Hide>
         <MenuList>
-          <MenuItem>About Me</MenuItem>
-          <MenuItem>Tecnologies</MenuItem>
-          <MenuItem>Projects</MenuItem>
-          <MenuItem>Get in Touch</MenuItem>
+          <MenuItem onClick={handleAbout}>About Me</MenuItem>
+          <MenuItem onClick={handleTech}>Tecnologies</MenuItem>
+          <MenuItem onClick={handleProjects}>Projects</MenuItem>
+          <MenuItem onClick={handleGet}>Get in Touch</MenuItem>
         </MenuList>
       </Menu>
       <Link href="/">
@@ -65,10 +82,10 @@ const Navbar = () => {
           />
         </Show>
         <MenuList>
-          <MenuItem>About Me</MenuItem>
-          <MenuItem>Tecnologies</MenuItem>
-          <MenuItem>Projects</MenuItem>
-          <MenuItem>Get in Touch</MenuItem>
+          <MenuItem onClick={handleAbout}>About Me</MenuItem>
+          <MenuItem onClick={handleTech}>Tecnologies</MenuItem>
+          <MenuItem onClick={handleProjects}>Projects</MenuItem>
+          <MenuItem onClick={handleGet}>Get in Touch</MenuItem>
         </MenuList>
       </Menu>
       <Hide below="sm">

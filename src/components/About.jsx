@@ -5,6 +5,7 @@ import borda from "../assets/borda.webp";
 const About = () => {
   return (
     <SimpleGrid
+      id="about"
       h="100vh"
       columns={{ base: 1, md: 2 }}
       gap={{ base: "1px", xl: "10px" }}

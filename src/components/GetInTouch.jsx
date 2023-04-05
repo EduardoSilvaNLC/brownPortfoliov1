@@ -4,7 +4,7 @@ import React from "react";
 
 const GetInTouch = () => {
   return (
-    <Stack h="100vh">
+    <Stack h="100vh" id="getin">
       <Box m="auto" textAlign="center">
         <Text
           fontSize={{ base: "40px", lg: "60px", xl: "50px" }}

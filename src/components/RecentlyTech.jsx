@@ -14,7 +14,7 @@ import borda from "../assets/borda.webp";
 
 const RecentlyTech = () => {
   return (
-    <Stack minHeight="100vh" maxW="1024px" m="auto">
+    <Stack minHeight="100vh" maxW="1024px" m="auto" id="tech">
       <Box m="50px auto">
         <Text
           textAlign="center"

@@ -14,7 +14,10 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const GameHub = () => {
   return (
-    <Box h={{ base: "100vh", md: "70vh", lg: "85vh", xl: "80vh" }}>
+    <Box
+      id="projects"
+      h={{ base: "100vh", md: "70vh", lg: "85vh", xl: "80vh" }}
+    >
       <Box m="40px auto">
         <Text
           textAlign="center"
