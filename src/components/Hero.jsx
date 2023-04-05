@@ -1,4 +1,4 @@
-import { Box, Button, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Image, Link, Stack, Text } from "@chakra-ui/react";
 import borda from "../assets/borda.webp";
 import { gsap } from "gsap";
 
@@ -9,6 +9,10 @@ const gsapFade = () => {
     ease: "back.out(1.7)",
     y: 300,
   });
+};
+
+const handleProject = () => {
+  gsap.to(window, { duration: 1, scrollTo: "#projects" });
 };
 
 const Hero = () => {
@@ -51,18 +55,22 @@ const Hero = () => {
           src={borda}
         />
         <Box mt={{ base: 6, lg: 9 }}>
-          <Button
-            bgColor="#DD813E"
-            color="#1B0F18"
-            size={{ base: "sm", md: "md", lg: "lg" }}
-          >
-            Hire-me
-          </Button>
+          <Link href="mailto:eduardo@eduardosilvanlc.com" isExternal>
+            <Button
+              bgColor="#DD813E"
+              color="#1B0F18"
+              size={{ base: "sm", md: "md", lg: "lg" }}
+            >
+              Hire-me
+            </Button>
+          </Link>
+
           <Button
             bgColor="#1B0F18"
             color="#DD813E"
             ml={2}
             size={{ base: "sm", md: "md", lg: "lg" }}
+            onClick={handleProject}
           >
             Projects
           </Button>
