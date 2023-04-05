@@ -1,4 +1,4 @@
-import { Box, Button, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Image, Link, Stack, Text } from "@chakra-ui/react";
 import borda from "../assets/borda.webp";
 import React from "react";
 
@@ -18,15 +18,16 @@ const GetInTouch = () => {
             I’m currently looking for new opportunities, please feel free to
             send me a message. I will answer your message as soon as possible.
           </Text>
-          <Button
-            mailto="eduardo@eduardosilva.com"
-            bgColor="#1B0F18"
-            color="#DD813E"
-            mt={8}
-            size={{ base: "sm", md: "md", lg: "lg" }}
-          >
-            Send Message
-          </Button>
+          <Link href="mailto:eduardo@eduardosilvanlc.com" isExternal>
+            <Button
+              bgColor="#1B0F18"
+              color="#DD813E"
+              mt={8}
+              size={{ base: "sm", md: "md", lg: "lg" }}
+            >
+              Send Message
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Stack>
