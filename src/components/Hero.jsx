@@ -1,9 +1,19 @@
 import { Box, Button, Image, Stack, Text } from "@chakra-ui/react";
 import borda from "../assets/borda.webp";
+import { gsap } from "gsap";
+
+const gsapFade = () => {
+  gsap.from("#heroi", {
+    duration: 3.3,
+    opacity: 0,
+    ease: "back.out(1.7)",
+    y: 300,
+  });
+};
 
 const Hero = () => {
   return (
-    <Stack spacing={2} padding="10px">
+    <Stack spacing={2} padding="10px" id="heroi" onLoad={gsapFade}>
       <Box
         pos={{ base: "relative", md: "relative" }}
         top={{ base: "24vh", md: "22vh" }}
