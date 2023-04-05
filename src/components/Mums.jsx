@@ -30,7 +30,7 @@ const GameHub = () => {
             color="#DD813E"
             fontSize={{ base: "30px", md: "35px", lg: "40px", xl: "50px" }}
           >
-            Mum's Cafe Cambridge
+            Mum's Café Cambridge
           </Text>
           <Text
             fontSize={{ base: "15px", md: "15px", lg: "18px", xl: "22px" }}
@@ -42,8 +42,8 @@ const GameHub = () => {
             ml={{ md: "auto", lg: "auto", xl: "auto" }}
             m={{ base: "auto", md: "auto", lg: "auto" }}
           >
-            Mum’s Café Cambridge is one of my first project that I created for
-            my wife restaurant. I made the design and codify with basic HTML,
+            Mum’s Café Cambridge is one of my first projects that I created for
+            my wife's restaurant. I made the design and coded with basic HTML,
             CSS and JavaScript.
           </Text>
         </Box>

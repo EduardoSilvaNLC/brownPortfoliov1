@@ -68,8 +68,8 @@ const GameHub = () => {
               ml={{ md: "auto", lg: "auto", xl: "auto" }}
               m={{ base: "auto", md: "auto", lg: "auto" }}
             >
-              Game Hub is an app that allowed users to see the rate of the game
-              and with platform they are available.
+              Game Hub is an app that allows users to see the rate of the game,
+              and which platform they are available on.
             </Text>
           </Box>
           <Box textAlign={{ base: "center", md: "end", xl: "end" }}>

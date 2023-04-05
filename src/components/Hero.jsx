@@ -46,7 +46,7 @@ const Hero = () => {
           fontSize={{ base: "20px", md: "4xl", lg: "40px", xl: "50px" }}
           color="#FBDFB3"
         >
-          I build useful website for the web.
+          I build useful websites for the web.
         </Text>
         <Image
           mt={{ base: "10px" }}

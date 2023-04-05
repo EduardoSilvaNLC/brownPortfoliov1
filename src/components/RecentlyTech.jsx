@@ -21,7 +21,7 @@ const RecentlyTech = () => {
           fontSize={{ base: "40px", lg: "60px", xl: "50px" }}
           color="#FBDFB3"
         >
-          Recently Technologies Worked
+          Recent Technologies
         </Text>
         <Image w="60%" h="1px" src={borda} m="auto" />
       </Box>
@@ -36,8 +36,8 @@ const RecentlyTech = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            As one react developer, most of my projects was created with this
-            library that help me to create useful and fast websites.
+            As a react developer, most of my projects were created with this
+            library, this helped me to create useful and fast websites.
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
@@ -50,7 +50,8 @@ const RecentlyTech = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            TypeScript is my new tool that I still studying about it.
+            I started to study TypeScript a few weeks ago, and soon I will
+            create some apps.
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
@@ -63,7 +64,7 @@ const RecentlyTech = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            Gsap is my favorite tool to animated my websites and my portfolio.
+            Gsap is my favorite tool to animate my projects.
           </AccordionPanel>
         </AccordionItem>
       </Accordion>

@@ -57,7 +57,7 @@ const Navbar = () => {
         </Hide>
         <MenuList>
           <MenuItem onClick={handleAbout}>About Me</MenuItem>
-          <MenuItem onClick={handleTech}>Tecnologies</MenuItem>
+          <MenuItem onClick={handleTech}>Technologies</MenuItem>
           <MenuItem onClick={handleProjects}>Projects</MenuItem>
           <MenuItem onClick={handleGet}>Get in Touch</MenuItem>
         </MenuList>
@@ -83,7 +83,7 @@ const Navbar = () => {
         </Show>
         <MenuList>
           <MenuItem onClick={handleAbout}>About Me</MenuItem>
-          <MenuItem onClick={handleTech}>Tecnologies</MenuItem>
+          <MenuItem onClick={handleTech}>Technologies</MenuItem>
           <MenuItem onClick={handleProjects}>Projects</MenuItem>
           <MenuItem onClick={handleGet}>Get in Touch</MenuItem>
         </MenuList>

@@ -16,7 +16,7 @@ const GetInTouch = () => {
         <Box>
           <Text p="10px" mt="20px" fontSize={{ xl: "23px" }} maxW="900px">
             I’m currently looking for new opportunities, please feel free to
-            send me a message. I will answer your message as soon as possible.
+            send me a message. I will answer your message as soon as I can.
           </Text>
           <Link href="mailto:eduardo@eduardosilvanlc.com" isExternal>
             <Button

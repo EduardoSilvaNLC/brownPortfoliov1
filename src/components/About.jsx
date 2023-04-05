@@ -28,13 +28,13 @@ const About = () => {
         lineHeight={{ base: 1.7 }}
       >
         <Text fontSize={{ md: "20px", lg: "30px", xl: "20px" }}>
-          Hello! My name is Eduardo and I enjoy creating app and website to make
-          the people life easier. My interest in web development started back in
-          2019 when I decided to try creating a website for my wife using HTML &
-          CSS. Fast-forward to today, I started working at Fiverr as a
-          freelancer to expand my knowledge in JavaScript and React. My main
-          focus these days is building accessible, funny, and useful websites to
-          everyone.
+          Hello! My name is Eduardo, and I enjoy creating apps and websites
+          which will make peoples life's easier. My interest in web development
+          started back in 2019 when I decided to try and create a website for my
+          wife's business using HTML & CSS. Fast-forward to today, I now do some
+          work on Fiverr as a freelancer to expand my knowledge in React. My
+          main focus these days is building accessible, funny, and useful
+          websites for everyone.
         </Text>
       </Box>
     </SimpleGrid>
