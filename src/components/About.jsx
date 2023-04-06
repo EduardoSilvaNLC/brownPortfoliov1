@@ -44,7 +44,7 @@ const About = () => {
       gap={{ base: "1px", xl: "10px" }}
       padding={{ md: "10px" }}
     >
-      <Box m="auto">
+      <Box textAlign="center" m="auto">
         <Text
           fontSize={{ base: "40px", lg: "60px", xl: "50px" }}
           color="#FBDFB3"
