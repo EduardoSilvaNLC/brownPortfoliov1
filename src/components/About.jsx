@@ -53,7 +53,7 @@ const About = () => {
           About me
         </Text>
 
-        <Image w="100%" m="auto" h="1px" src={borda} />
+        <Image w="20%" m="auto" h="1px" src={borda} />
       </Box>
       <Box
         ref={circle}
