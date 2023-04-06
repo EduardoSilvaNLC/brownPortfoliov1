@@ -1,10 +1,43 @@
 import { Box, Icon, Image, SimpleGrid, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import borda from "../assets/borda.webp";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
+  const app = useRef(); // create a ref for the root level element (for scoping)
+  const circle = useRef();
+  const cabeca = useRef();
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.to(circle.current, {
+        scrollTrigger: {
+          trigger: circle.current,
+          toggleActions: "restart none restart none",
+        },
+        x: -90,
+        duration: 3,
+      });
+      gsap.from(cabeca.current, {
+        scrollTrigger: {
+          trigger: circle.current,
+          toggleActions: "restart none restart none",
+        },
+        y: -45,
+        delay: 1,
+        opacity: 0,
+        duration: 3,
+      });
+    }, app); // <- IMPORTANT! Scopes selector text
+    return () => ctx.revert();
+  }, []);
+
   return (
     <SimpleGrid
+      ref={app}
       id="about"
       h="100vh"
       columns={{ base: 1, md: 2 }}
@@ -15,6 +48,7 @@ const About = () => {
         <Text
           fontSize={{ base: "40px", lg: "60px", xl: "50px" }}
           color="#FBDFB3"
+          ref={cabeca}
         >
           About me
         </Text>
@@ -22,6 +56,7 @@ const About = () => {
         <Image w="100%" h="1px" src={borda} />
       </Box>
       <Box
+        ref={circle}
         m={{ base: "1px", md: "auto", xl: "auto" }}
         p={{ base: "15px", md: "15px" }}
         textAlign={{ base: "justify" }}
