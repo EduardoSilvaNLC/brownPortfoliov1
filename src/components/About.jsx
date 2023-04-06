@@ -13,7 +13,7 @@ const About = () => {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.to(circle.current, {
+      gsap.from(circle.current, {
         scrollTrigger: {
           trigger: circle.current,
           toggleActions: "restart none restart none",
@@ -53,7 +53,7 @@ const About = () => {
           About me
         </Text>
 
-        <Image w="100%" h="1px" src={borda} />
+        <Image w="100%" m="auto" h="1px" src={borda} />
       </Box>
       <Box
         ref={circle}
