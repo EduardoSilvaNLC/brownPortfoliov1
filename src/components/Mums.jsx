@@ -7,12 +7,64 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import borda from "../assets/borda.webp";
 import mum from "../assets/mums.webp";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const GameHub = () => {
+gsap.registerPlugin(ScrollTrigger);
+
+const Mums = () => {
+  const app = useRef(); // create a ref for the root level element (for scoping)
+  const circle = useRef();
+  const cabeca = useRef();
+  const texto = useRef();
+  const feature = useRef();
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(circle.current, {
+        scrollTrigger: {
+          trigger: circle.current,
+          toggleActions: "restart none restart none",
+        },
+        x: 90,
+        duration: 2,
+      });
+      gsap.from(cabeca.current, {
+        scrollTrigger: {
+          trigger: cabeca.current,
+          toggleActions: "restart none restart none",
+        },
+        y: -45,
+        delay: 1,
+        opacity: 0,
+        duration: 2,
+      });
+      gsap.from(feature.current, {
+        scrollTrigger: {
+          trigger: feature.current,
+          toggleActions: "restart none restart none",
+        },
+        y: -45,
+        delay: 1,
+        opacity: 0,
+        duration: 3,
+      });
+      gsap.from(texto.current, {
+        scrollTrigger: {
+          trigger: texto.current,
+          toggleActions: "restart none restart none",
+        },
+        y: 45,
+        opacity: 0,
+        duration: 3,
+      });
+    }, app); // <- IMPORTANT! Scopes selector text
+    return () => ctx.revert();
+  }, []);
   return (
     <SimpleGrid
       columns={{ base: 1, md: 2 }}
@@ -23,16 +75,21 @@ const GameHub = () => {
     >
       <Flex direction="column">
         <Box textAlign={{ base: "center", md: "start", xl: "start" }}>
-          <Text fontSize={{ base: "10px", md: "15px", lg: "17px", xl: "18px" }}>
+          <Text
+            ref={feature}
+            fontSize={{ base: "10px", md: "15px", lg: "17px", xl: "18px" }}
+          >
             Featured Project
           </Text>
           <Text
+            ref={cabeca}
             color="#DD813E"
             fontSize={{ base: "30px", md: "35px", lg: "40px", xl: "50px" }}
           >
             Mum's Café Cambridge
           </Text>
           <Text
+            ref={texto}
             fontSize={{ base: "15px", md: "15px", lg: "18px", xl: "22px" }}
             color="#1B0E18"
             bgColor="#FBDFB3"
@@ -69,6 +126,8 @@ const GameHub = () => {
         </Box>
       </Flex>
       <Image
+        borderRadius="20px"
+        ref={circle}
         m={{ base: "auto" }}
         w={{ base: "90%", md: "100%", lg: "100%", xl: "100%" }}
         src={mum}
@@ -77,4 +136,4 @@ const GameHub = () => {
   );
 };
 
-export default GameHub;
+export default Mums;

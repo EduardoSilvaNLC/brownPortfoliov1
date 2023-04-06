@@ -7,7 +7,7 @@ import borda from "../assets/borda.webp";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const app = useRef(); // create a ref for the root level element (for scoping)
+  const tech = useRef(); // create a ref for the root level element (for scoping)
   const circle = useRef();
   const cabeca = useRef();
 
@@ -31,13 +31,13 @@ const About = () => {
         opacity: 0,
         duration: 3,
       });
-    }, app); // <- IMPORTANT! Scopes selector text
+    }, tech); // <- IMPORTANT! Scopes selector text
     return () => ctx.revert();
   }, []);
 
   return (
     <SimpleGrid
-      ref={app}
+      ref={tech}
       id="about"
       h="100vh"
       columns={{ base: 1, md: 2 }}
