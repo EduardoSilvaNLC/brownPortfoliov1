@@ -23,7 +23,7 @@ const About = () => {
       });
       gsap.from(cabeca.current, {
         scrollTrigger: {
-          trigger: circle.current,
+          trigger: cabeca.current,
           toggleActions: "restart none restart none",
         },
         y: -45,

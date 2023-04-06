@@ -9,14 +9,47 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import borda from "../assets/borda.webp";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const RecentlyTech = () => {
+  const app = useRef(); // create a ref for the root level element (for scoping)
+  const cabeca = useRef();
+  const texto = useRef();
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(cabeca.current, {
+        scrollTrigger: {
+          trigger: cabeca.current,
+          toggleActions: "restart none restart none",
+        },
+        y: -45,
+        delay: 1,
+        opacity: 0,
+        duration: 3,
+      });
+      gsap.from(texto.current, {
+        scrollTrigger: {
+          trigger: texto.current,
+          toggleActions: "restart none restart none",
+        },
+        y: 45,
+        opacity: 0,
+        duration: 3,
+      });
+    }, app); // <- IMPORTANT! Scopes selector text
+    return () => ctx.revert();
+  }, []);
   return (
     <Stack minHeight="100vh" maxW="1024px" m="auto" id="tech">
       <Box m="50px auto">
         <Text
+          ref={cabeca}
           textAlign="center"
           fontSize={{ base: "40px", lg: "60px", xl: "50px" }}
           color="#FBDFB3"
@@ -25,7 +58,7 @@ const RecentlyTech = () => {
         </Text>
         <Image w="60%" h="1px" src={borda} m="auto" />
       </Box>
-      <Accordion allowToggle padding="10px">
+      <Accordion allowToggle padding="10px" ref={texto}>
         <AccordionItem>
           <h2>
             <AccordionButton>
