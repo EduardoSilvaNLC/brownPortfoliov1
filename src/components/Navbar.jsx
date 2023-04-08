@@ -13,7 +13,7 @@ import {
   Hide,
 } from "@chakra-ui/react";
 import { FiMenu, FiGithub, FiLinkedin } from "react-icons/fi";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import logo from "../assets/E.Silva.webp";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -96,6 +96,7 @@ const Navbar = () => {
               as={FiGithub}
               color="#FBDFB3"
               verticalAlign="middle"
+              w="40px"
             />
           </Link>
           <Link
