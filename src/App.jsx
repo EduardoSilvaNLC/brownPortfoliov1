@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import { Stack } from "@chakra-ui/react";
-import fd from "./assets/fd4.png";
+import fd from "./assets/fd4.webp";
 import "./App.css";
 import About from "./components/About";
 import RecentlyTech from "./components/RecentlyTech";
