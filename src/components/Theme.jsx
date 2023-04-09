@@ -6,6 +6,7 @@ const overrides = extendTheme({
       body: {
         bgGradient: "linear(to-r,rgba(25, 11, 19, 1), rgba(68, 53, 49, 1))",
         color: "#FBDFB3",
+        overflow: "hidden",
       },
     }),
   },
