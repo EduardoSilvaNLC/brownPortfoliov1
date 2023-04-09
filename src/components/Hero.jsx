@@ -22,20 +22,20 @@ const Hero = () => {
         opacity: 0,
         y: 70,
         duration: 1.5,
-        delay: 2,
+        delay: 2.5,
       });
       gsap.from(thirdEntrance.current, {
         opacity: 0,
         y: 90,
         duration: 1.5,
-        delay: 3,
+        delay: 3.8,
       });
-      gsap.from(titleShow.current, { opacity: 0, duration: 1.3, delay: 1.5 });
+      gsap.from(titleShow.current, { opacity: 0, duration: 1.7, delay: 1.8 });
       gsap.from(hireMe.current, {
         opacity: 0,
         x: -40,
         duration: 1.3,
-        delay: 1.5,
+        delay: 4.7,
       });
     }, heroAnime); // <- IMPORTANT! Scopes selector text
     return () => ctx.revert();

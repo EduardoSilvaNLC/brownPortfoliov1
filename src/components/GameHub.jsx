@@ -77,6 +77,7 @@ const GameHub = () => {
   }, []);
   return (
     <Box
+      overflowX="hidden"
       id="projects"
       h={{ base: "100vh", md: "70vh", lg: "85vh", xl: "80vh" }}
     >

@@ -43,6 +43,7 @@ const Navbar = () => {
       alignItems="center"
       padding="10px"
       color="#DD813E"
+      overflowX="hidden"
     >
       <Menu>
         <Hide below="sm">
