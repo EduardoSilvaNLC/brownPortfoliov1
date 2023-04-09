@@ -1,4 +1,4 @@
-import { Box, Icon, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
